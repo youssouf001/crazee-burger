@@ -10,7 +10,7 @@ export default function OrderPage() {
     <div>
       <h1>Bonjour {username}</h1>
       <br />
-      <Link to="/login">
+      <Link to="/">
         <button>Deconnexion</button>
       </Link>
     </div>
