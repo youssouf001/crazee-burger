@@ -12,6 +12,7 @@ export default function LoginPage() {
 }
 
 const LoginPageSytyled = styled.div`
+  position: relative;
   height: 100vh;
   display: flex;
   flex-direction: column;
