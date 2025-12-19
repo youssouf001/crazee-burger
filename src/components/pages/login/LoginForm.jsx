@@ -3,6 +3,7 @@ import { BsPersonCircle } from "react-icons/bs";
 import { IoChevronForward } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import Input from "./Input";
 
 export default function LoginForm() {
   //state
@@ -26,16 +27,12 @@ export default function LoginForm() {
         <h2>Connectez-vous</h2>
       </div>
       <div>
-        <div className="input-with-icon">
-          <BsPersonCircle className="icon" />
-          <input
-            type="text"
-            placeholder="Entrez votre prénom..."
-            required
-            value={inputValue}
-            onChange={handlechange}
-          />
-        </div>
+        <Input
+          value={inputValue}
+          onChange={handlechange}
+          placeholder={"Entrez votre prénom..."}
+          Icon={<BsPersonCircle className="icon" />}
+        />
         <button className="button-with-icon">
           <span>Accéder à mon espace</span>
           <IoChevronForward className="icon" />
@@ -69,32 +66,6 @@ const LoginFormStyled = styled.form`
     color: white;
     font-size: 36px;
     margin: 20px 10px 10px;
-  }
-
-  .input-with-icon {
-    background-color: #fff;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    padding: 18px 24px;
-    margin: 18px 0px;
-
-    .icon {
-      font-size: 16px;
-      margin-right: 8px;
-      color: #93a2b1;
-    }
-
-    input {
-      border: none;
-      font-style: 15px;
-      color: #17161a;
-    }
-
-    &::placeholder {
-      background: white;
-      color: lightgray;
-    }
   }
 
   .button-with-icon {
